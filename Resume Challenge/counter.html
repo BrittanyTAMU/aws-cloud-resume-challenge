@@ -1,0 +1,84 @@
+<main id="container">
+    <div>
+      <span id="pageviews-count"></span>
+      <h4>Pageviews</h4>
+    </div>
+    <div>
+      <span id="visits-count"></span>
+      <h4>Visits</h4>
+    </div>
+  </main>
+  <!-- CSS code to make the counter look pretty
+  <link rel="stylesheet" type="text/css" href="C:\Users\18629\OneDrive - Texas A&M University\Desktop\Resume Challenge\styles.css">-->
+  <!--if you want to add CSS to make your HTML look preety, then use <style> -->
+  <style>
+     @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Roboto', sans-serif;
+      color: black;
+    }
+    #container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: 2rem;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      padding: 2px 16px;
+    }
+    #container > div {
+      padding: 1rem;
+      margin: 1rem;
+      width: 7rem;
+    }
+    #container span {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    #container h4 {
+      font-size: 1rem;
+      font-weight: normal;
+      margin: 0;
+      margin-top: 1rem;
+    }
+  </style>
+<script>
+    const pageviewsCount = document.getElementById('pageviews-count');
+    const visitsCount = document.getElementById('visits-count');
+
+    if (sessionStorage.getItem('visit') === null) {
+      // New visit and pageview
+      updateCounter('type=visit-pageview');
+    } else {
+      // Pageview
+      updateCounter('type=pageview');
+    }
+
+    function updateCounter(type) {
+      fetch('http://127.0.0.1:3002/api?' + type) // Dynamic request with URL parameter
+        .then(res => res.json())
+        .then(data => {
+          pageviewsCount.textContent = data.pageviews; // Display pageviews to the user
+          visitsCount.textContent = data.visits; // Display visits to the user
+        });
+    }
+
+    sessionStorage.setItem('visit', 'x');
+    // 'visit' item persists in storage for the remainder of the user session
+  </script>
+</script>
+
+<script>
+    // JavaScript for vistor counter. you are creating an element called counter whihc will select an element calle counter-number in you HTML file
+    const counter = document.querySelector(".counter-number");
+    async function updateCounter(){
+        let response = await fetch("https://qm3xp7vwohd3o7w5uqoaclebj40riddw.lambda-url.us-east-1.on.aws/")
+        let data = await response.json();
+        counter.innerHTML = ` Views: ${data}`;
+    }
+    updateCounter();
+</script>

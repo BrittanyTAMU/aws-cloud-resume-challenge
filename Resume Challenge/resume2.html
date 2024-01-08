@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --primary-bg-light: #f8f9fa;
+      --primary-bg-dark: #001f3f; /* Dark blue */
+      --text-color-light: #495057;
+      --text-color-dark: #e5e5e5;
+      --accent-color: #d2b48c; /* Tan color */
+      --yellow-color: #ffd700; /* Yellow color */
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--primary-bg-light);
+      color: var(--text-color-light);
+      transition: background-color 0.5s, color 0.5s;
+      position: relative; /* Set body position to relative */
+    }
+
+    .dark-mode body {
+      background-color: var(--primary-bg-dark);
+      color: var(--text-color-dark);
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 0;
+      background-color: var(--accent-color);
+      color: var(--primary-bg-light);
+      position: relative; /* Set header position to relative */
+    }
+
+    h1, h2, h3 {
+      color: var(--yellow-color); /* Set text color to yellow */
+      z-index: 1; /* Set z-index to make sure text is in front */
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      margin-top: 20px;
+      background-color: var(--primary-bg-light);
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.5s;
+    }
+
+    .dark-mode main {
+      background-color: var(--primary-bg-dark);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--accent-color);
+      color: var(--primary-bg-light);
+      border-radius: 0 0 8px 8px;
+      margin-top: 20px;
+    }
+
+    .dark-mode footer {
+      background-color: var(--primary-bg-dark);
+    }
+
+    .dark-mode-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 30px; /* Adjust the font size as needed */
+      cursor: pointer;
+      color: var(--accent-color);
+      z-index: 2; /* Set z-index to be in front of the text */
+    }
+
+    .dark-mode .dark-mode-toggle {
+      color: var(--primary-bg-light);
+    }
+
+    .wave-animation {
+      position: absolute; /* Set position to absolute */
+      top: 0; /* Adjust the top position as needed */
+      left: 0; /* Set left to 0 */
+      width: 100%; /* Make the image span the entire width */
+      text-align: left; /* Align the image to the left */
+      z-index: 0; /* Set z-index to be behind the text */
+    }
+
+    .wave-animation img {
+      width: 230px; /* Adjust the width as needed */
+    }
+  </style>
+  <title>Cloud Resume</title>
+</head>
+
+<body>
+
+  <header>
+    <h1>Hi! My name is Brittany Washington, MSc, </h1> <!-- Added this line -->
+    <h2>Cloud Engineer</h2> <!-- Added this line -->
+    <!-- Move the .wave-animation inside header -->
+    <div class="wave-animation">
+      <img src="images/bg.png" alt="Animated Wave">
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Contact Information</h2>
+      <p>Email: bgw26@tamu.edu| bgw26@rutgers.edu</p>
+      <p>Phone: 862.900.9557</p>
+      <p>www.linkedin.com/in/bgw2023</p>
+      <p>REFERENCES ARE AVAILABLE UPON REQUEST</p>
+    </section>
+
+    <section>
+      <h2>Objective</h2>
+      <p>Certified Cloud Engineer and Solution Architect with a proven track record in designing and implementing scalable cloud solutions. Former Project Engineer with a unique blend of technical acumen and project management skills. Dedicated to architecting secure and compliant cloud environments aligned with business goals. Seeking a challenging role to leverage expertise in cloud architecture, automation, CI/CD, and full stack development.</p>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <h3>TEXAS A&M, COLLEGE STATION, TX</h3>
+      <p>Master of Science, Environmental Engineering  </p>
+      <p>Graduation Year: 2022
+        <h3>RUTGERS, THE STATE UNIVERSITY, NEWARK, NJ </h3>
+          <p>Bachelor of Science, Civil Engineering Minor: Computer Science</p>
+       
+      </p>
+    </section>
+
+    <section>
+      <h2>Certification</h2>
+      <p>AWS Certified Solutions Architect| AWS Certified Cloud Practitioner</p> 
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <h3>PROJECT ENGINEER</h3>
+      <p>ARCHER WESTERN CONSTRUCTION</p>
+      <p>Start Date: May 2022</p>
+      <p>End Date: Current</p>
+      <p>Designed an excel application to manage changes to scope, cost and documentation.
+        This application was applied to monitor a successful $80M commercial development resulting in equipment, labor and subcontractor cost reducing by 20% below estimated margins.
+        -	Collaborated with legal in the drafting and reviewing subcontractor bonds contracts to ensure that they captured the important points of the subcontractor bond.
+        </p>
+    </section>
+
+    <section>
+      <h3>GRC ANALYST</h3>
+      <p>SIMPLYCYBER.IO</p>
+      <p>Start Date: JANUARY 2020</p>
+      <p>End Date: May 2022</p>
+      <p>Prepared, executed, and audited a subset of NIST SP 800-53 controls, ensuring compliance with cybersecurity standards.
+        Designed and implemented information security policies to establish authorized access management and authenticator management for both internal and third-party personnel.
+        </p>
+    </section>
+
+  </main>
+
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+        color: #495057;
+      }
+  
+      main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+      }
+  
+      h2 {
+        color: #ffd700;
+      }
+  
+      .bar-graph {
+        margin-top: 20px;
+      }
+  
+      .bar {
+        height: 30px;
+        background-color: #d2b48c;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        position: relative;
+      }
+  
+      .bar span {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #ffd700;
+        font-weight: bold;
+      }
+    </style>
+    <title>Skill Proficiency</title>
+  </head>
+  
+  <body>
+  
+    <main>
+      <h2>Skill Proficiency</h2>
+  
+      <div class="bar-graph">
+        <div class="bar" style="width: 90%;">
+          <span>Project Management</span>
+        </div>
+  
+        <div class="bar" style="width: 80%;">
+          <span>Cloud Infrastructure</span>
+        </div>
+  
+        <div class="bar" style="width: 70%;">
+          <span>GRC (Governance, Risk, and Compliance)</span>
+        </div>
+  
+        <div class="bar" style="width: 70%;">
+          <span>Security</span>
+        </div>
+      </div>
+    </main>
+  
+  </body>
+  
+  </html>
+  
+
+
+  <footer>
+    <p>&copy; 2023 Brittany Washington. All rights reserved.</p>
+  </footer>
+
+  <div class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</div>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+
+</body>
+
+</html>
+
+
+

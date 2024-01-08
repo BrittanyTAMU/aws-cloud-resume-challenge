@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    :root {
+      --primary-bg-light: #f8f9fa;
+      --primary-bg-dark: #001f3f; /* Dark blue */
+      --text-color-light: #495057;
+      --text-color-dark: #e5e5e5;
+      --accent-color: #d2b48c; /* Tan color */
+      --yellow-color: #ffd700; /* Yellow color */
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--primary-bg-light);
+      color: var(--text-color-light);
+      transition: background-color 0.5s, color 0.5s;
+      position: relative; /* Set body position to relative */
+    } 
+
+    body.dark-mode {
+      background-color: var(--primary-bg-dark);
+      color: var(--text-color-dark);
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 0;
+      background-color: var(--accent-color);
+      color: var(--primary-bg-light);
+      position: relative; /* Set header position to relative */
+    }
+
+    h1, h2, h3 {
+      color: var(--yellow-color); /* Set text color to yellow */
+      z-index: 1; /* Set z-index to make sure text is in front */
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      margin-top: 20px;
+      background-color: var(--primary-bg-light);
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.5s;
+    }
+
+    .dark-mode main {
+      background-color: var(--primary-bg-dark);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--accent-color);
+      color: var(--primary-bg-light);
+      border-radius: 0 0 8px 8px;
+      margin-top: 20px;
+    }
+
+    .dark-mode footer {
+      background-color: var(--primary-bg-dark);
+    }
+
+    .dark-mode-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 30px; /* Adjust the font size as needed */
+      cursor: pointer;
+      color: var(--accent-color);
+      z-index: 2; /* Set z-index to be in front of the text */
+    }
+
+    .dark-mode .dark-mode-toggle {
+      color: var(--primary-bg-light);
+    }
+
+    .wave-animation {
+      position: absolute; /* Set position to absolute */
+      top: 0; /* Adjust the top position as needed */
+      left: 0; /* Set left to 0 */
+      width: 100%; /* Make the image span the entire width */
+      text-align: left; /* Align the image to the left */
+      z-index: 0; /* Set z-index to be behind the text */
+    }
+
+    .wave-animation img {
+      width: 230px; /* Adjust the width as needed */
+    }
+  </style>
+  <title>Cloud Resume</title>
+</head>
+
+<body>
+
+  <header>
+    <h1>Hi! My name is Brittany Washington, MSc</h1> <!-- Added this line -->
+    <h2>Cloud Engineer</h2> <!-- Added this line -->
+    <h3> 
+      <i class="fas fa-envelope"></i> bgw26@tamu.edu | bgw26@rutgers.edu &nbsp;&nbsp;&nbsp;
+      <i class="fas fa-phone"></i> 862.900.9557 &nbsp;&nbsp;&nbsp;
+      <i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/bgw2023" target="_blank">BGW2023</a>
+      <p>REFERENCES ARE AVAILABLE UPON REQUEST</p> </h3>
+    <!-- Move the .wave-animation inside header -->
+    <div class="wave-animation">
+      <img src="images/bg.png" alt="Animated Wave">
+    </div>
+  </header>
+
+  <!-- took this out to place it in my header <main>
+    <section>
+      <h2>I. Contact Information</h2>
+      <i class="fas fa-envelope"></i> bgw26@tamu.edu | bgw26@rutgers.edu &nbsp;&nbsp;&nbsp;
+      <i class="fas fa-phone"></i> 862.900.9557 &nbsp;&nbsp;&nbsp;
+      <i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/bgw2023" target="_blank">BGW2023</a>
+      <p>REFERENCES ARE AVAILABLE UPON REQUEST</p>
+    </section><-->
+
+    <section>
+      <h2><u> I. Professional Summary</u></h2>
+      <p>Certified Cloud Engineer with a proven track record in designing and implementing scalable cloud solutions, including govcloud solutions. Former Civil Engineer with a unique blend of technical acumen and project/budget management skills. Dedicated to architecting secure and compliant cloud environments aligned with business goals. Seeking a challenging role to leverage expertise in cloud architecture, automation, CI/CD, and full stack development.</p>
+    </section>
+
+    <section>
+      <h2><u>II. Education</u></h2>
+      <h3>TEXAS A&M, COLLEGE STATION, TX</h3>
+      <p>Master of Science, Environmental Engineering  </p>
+      <p>Graduation Year: 2022
+        <h3>RUTGERS, THE STATE UNIVERSITY, NEWARK, NJ </h3>
+          <p>Bachelor of Science, Civil Engineering Minor: Computer Science</p>
+       
+      </p>
+    </section>
+
+    <section>
+      <h2><u>III. Personal Projects and Labs</u></h2>
+      <h3>Language Translator</h3>
+      <p>Designed and implemented a language translation services website utilizing AWS cloud services for enhanced scalability and performance.</p>
+      <p2>This project demonstrates my proficiency in web development, AWS cloud services, and my ability to deliver scalable and secure solutions.</p2>
+      <p><u>*Technical Environment:*</u></p>
+      <p>AWS Services: Amazon S3, AWS Lambda, Amazon Translate</p>
+      <p> Programming Languages: JavaScript, HTML, CSS</p>
+      <p> Frameworks: [Any frameworks used]</p>
+      <p>Infrastructure as Code: AWS CloudFormation</p> 
+
+      <p><u>*Architecture and Design:*</u></p>
+      <p>Implemented a serverless architecture using AWS Lambda for language translation functions.</p>  
+      <p>Utilized Amazon S3 for efficient storage and retrieval of translation resources.</p>  
+      <p>Employed AWS CloudFormation for infrastructure provisioning and management.</p>  
+
+      <p><u>*Scalability and Performance:*</u></p>
+      <p>Designed the website to scale dynamically based on user demand.</p>  
+      <p>Implemented performance optimizations to enhance translation speed and user experience.</p>  
+      
+      <p><u>*Security Measures:*</u></p>
+      <p>Implemented end-to-end encryption for secure language translation.</p>  
+      <p>Utilized AWS IAM for access control and security best practices.</p>  
+      
+      <p><u>*Documentation and Collaboration:*</u></p>
+      <p>Collaborated with a cross-functional team, contributing to the project's success.</p>  
+      <p>Created comprehensive documentation detailing the architecture, deployment procedures, and user guides.</p>  
+        </p>
+
+        <h3>Predictivie Application for cryptocurrency stocks </h3>
+        <p>Designed and implemented a predictive application for cryptocurrency stocks leveraging AWS cloud services.</p>
+        <p2> This project showcases my proficiency in machine learning, AWS services, and my ability to deliver predictive solutions for financial markets.</p2>
+        <p><u>*Technical Environment:*</u></p>
+        <p>AWS Services: Amazon S3, AWS Glue, AWS Lambda, AWS SageMaker, AWS Amplify</p>
+        <p> Programming Languages: JavaScript, HTML, CSS</p>
+        <p> Machine Learning: LSTM, ARIMA</p>
+         
+  
+        <p><u>*Key Contributions:*</u></p>
+        <p>Collected and stored historical and real-time cryptocurrency stock data on Amazon S3.</p>  
+        <p>Implemented data preprocessing using AWS Glue for cleaning and normalizing data.</p>  
+        <p>Developed a machine learning model using AWS SageMaker for predicting stock price trends.</p>  
+  
+        <p><u>*Results:*</u></p>
+        <p>Achieved [mention accuracy or performance metrics] in predicting cryptocurrency stock movements.</p>  
+        <p>Provided users with actionable insights for informed decision-making.</p>  
+        
+        <p><u>*Security and Monitoring:*</u></p>
+        <p>Ensured data security through encryption and IAM access controls.</p>  
+        <p>Implemented monitoring using Amazon CloudWatch for proactive issue resolution.</p>  
+        
+        <p><u>*Documentation and Collaboration:*</u></p>
+        <p>Collaborated with a cross-functional team, contributing to the project's success.</p>  
+        <p>Created detailed project documentation for future reference.</p>  
+
+        <h3>Bible Readings Web App with Text-to-Speech</h3>
+        <p>Developed a user-friendly web application that allows users to listen to the Bible with session stickiness for a personalized experience.</p>
+        <p2>This project highlights my skills in full-stack development, AWS services, and user-centric design.</p2>
+        <p><u>*Technical Environment:*</u></p>
+        <p>AWS Services: Amazon S3, Amazon Cognito, AWS Polly, Amazon DynamoDB, AWS Amplify</p>
+        <p> Programming Languages: JavaScript, HTML, CSS</p>
+        
+        <p><u>*Key Contributions:*</u></p>
+        <p>Stored and retrieved Bible text efficiently using Amazon S3.</p>  
+        <p>Implemented secure user authentication with Amazon Cognito.</p>  
+        <p>Integrated AWS Polly for high-quality Text-to-Speech conversion.</p>  
+        <p>Designed a user interface with session stickiness using Amazon DynamoDB.</p>
+        <p>Enabled users to navigate and select Bible chapters seamlessly.</p>
+  
+        <p><u>*Results:*</u></p>
+        <p>Achieved positive user feedback or engagement.</p>  
+        <p>Implemented security measures and session stickiness for an enhanced user experience.</p>  
+        
+        <p><u>*Feedback and Continuous Improvement:*</u></p>
+        <p>Incorporated user feedback for feature enhancements.</p>  
+        <p>Monitored and maintained the application using Amazon CloudWatch.</p>  
+        
+        <p><u>*Mobile Responsiveness:*</u></p>
+        <p>Ensured a mobile-friendly design for accessibility across various devices.</p>  
+        
+        <h3>Rental Property Management Web Application</h3>
+      <p>Designed and implemented a comprehensive rental property management web application using AWS services, offering seamless rent collection, service request handling, and secure financial transactions. Implemented advanced features for disaster recovery, chargeback handling, and real-time notifications.</p>
+      <p2>This project showcases proficiency in cloud architecture, secure financial transactions, disaster recovery, and compliance with industry standards.</p2>
+      
+      <p><u>*Technical Environment:*</u></p>
+      <p>AWS Services: AWS Amplify, Amazon Cognito, Amazon RDS, Amazon Pay, SQS, Lambda, CloudWatch, IAM, SNS, SSL/TLS.</p>
+      <p> Programming Languages: JavaScript, HTML, CSS</p>
+      <p> Frameworks: [Any frameworks used]</p>
+      <p>Infrastructure as Code: AWS CloudFormation</p> 
+
+      <p><u>*Architecture and Design:*</u></p>
+      <p>Deployed the application using AWS Amplify for scalable and efficient hosting.</p>  
+      <p>Utilized Amazon Cognito for robust user authentication, ensuring secure resident and staff access.</p>   
+
+      <p><u>*Database Management:*</u></p>
+      <p>Implemented an Amazon RDS database for storing resident information, service requests, and financial transactions.</p>  
+      <p>Ensured data security through encryption-at-rest mechanisms.</p>  
+      
+      <p><u>*Financial Transactions:*</u></p>
+      <p>Integrated Amazon Pay for secure credit and debit transactions.</p>  
+      <p>Developed a dedicated Amazon RDS database to store financial transactions, implementing encryption for sensitive data.</p>  
+      
+      <p><u>*Chargeback Handling:*</u></p>
+      <p>Automated chargeback handling processes through AWS Lambda functions, ensuring prompt and accurate updates to resident accounts.</p>  
+      
+      <p><u>*Disaster Recovery:*</u></p>
+      <p>Utilized Amazon RDS Multi-AZ for high availability and automated backups.</p>  
+      <p>Implemented disaster recovery strategies for seamless data restoration.</p>   
+
+      <p><u>*Queue/Notification System:*</u></p>
+      <p>Established an Amazon SQS-based queue for efficient management of maintenance and leasing requests.</p>  
+      <p>Integrated AWS Lambda functions to process and notify teams promptly via Amazon SNS.</p>   
+
+      <p><u>*Logging and Monitoring:*</u></p>
+      <p>Implemented centralized logging using Amazon CloudWatch Logs for effective debugging.</p>  
+      <p>Set up CloudWatch Alarms to monitor critical metrics and ensure proactive issue resolution.</p>   
+
+      <p><u>*Security Measures:*</u></p>
+      <p>Implemented encryption in transit using SSL/TLS.</p>  
+      <p>Applied AWS IAM for fine-grained access control, ensuring data security.</p>   
+
+      <p><u>*Compliance and Legal Considerations:*</u></p>
+      <p>Ensured compliance with relevant regulations, incorporating AWS Artifact for obtaining compliance reports.</p>  
+      <p>Collaborated with legal experts to meet data protection and tenant rights requirements.</p>   
+
+      <h3>Recommendation Letter Platform for Introverts</h3>
+      <p>The platform serves as a centralized hub for introverts seeking recommendation letters and individuals willing to provide them. Implemented advanced features such as ML-driven recommendation selection, letter generation, and insightful community metrics.</p>
+      
+      <p><u>*Technical Environment:*</u></p>
+      <p>AWS Services: AWS services (Elastic Beanstalk, DynamoDB, SageMaker), Machine Learning, Natural Language Processing.</p>
+      <p> Programming Languages: JavaScript, HTML, CSS</p>
+      
+      <p><u>*Architecture and Design:*</u></p>
+      <p>Implemented secure user registration with email verification.</p>  
+      <p>Developed user profiles capturing crucial details like name, credentials, workplace, and years of experience.</p>   
+
+      <p><u>*Delegation System:*</u></p>
+      <p>Designed a delegation system allowing users to express their interest in either requesting or writing recommendation letters.</p>  
+      <p>Enabled random selection of writers based on various parameters such as credentials, workplace, and expertise.</p>  
+      
+      <p><u>*ML-Driven Recommendation Selection:*</u></p>
+      <p>Integrated machine learning algorithms to analyze user credentials, workplace, and skills for recommending the most suitable letter writers.</p>  
+      <p>Utilized AWS SageMaker for scalable and efficient ML model deployment.</p>  
+      
+      <p><u>*Letter Generation Module:*</u></p>
+      <p>Developed a user-friendly interface for recommendation letter requests.</p>  
+      <p>Implemented an automated letter generation module ensuring standardized and professional content.</p>
+      
+      <p><u>*Natural Language Processing (NLP):*</u></p>
+      <p>Utilized NPL techniques to analyze the content of recommedation letters.</p>  
+      <p>Extract key skills, achievements, and attributes mentioned in the letters</p>   
+
+      <p><u>*Skills Heatmap:*</u></p>
+      <p>Generate a skills heatmap based on the aggregated data showing the frequency and importance of various skills mentioned in the recommendation letters.</p>  
+      <p>Integrated AWS Lambda functions to process and notify teams promptly via Amazon SNS.</p>   
+
+      <p><u>*Community Insight Dashboard::*</u></p>
+      <p>Implemented a comprehensive dashboard providing community insights.</p>  
+      <p>Summarized key metrics, including the number of recommendation letters created, most endorsed skills, and user engagement trends.</p>   
+
+      <p><u>*Highly Available and Scalable Database:*</u></p>
+      <p> Utilized Amazon DynamoDB for a highly available and scalable database to handle the increasing user base and data volume.</p>
+
+      <p><u>*Development and Production Website:*</u></p>
+      <p>Established separate development and production environments for disaster recovery and testing purposes.</p>  
+      <p>Ensured continuous website availability through AWS Elastic Beanstalk.</p>   
+
+      <p><u>*Future Enhancements:*</u></p>
+      <p>Continued development includes expanding ML models, refining NLP algorithms, and enhancing the community insight dashboard for a more personalized user experience.</p>  
+
+      <h3>Government Data Analytics Dashboard</h3>
+      <p>Designed and developed a comprehensive Government Data Analytics Dashboard using GovCloud services to analyze large-scale government datasets.</p>
+    
+      <p>Leveraged Amazon Athena and Amazon QuickSight to visualize complex data sets, enabling informed decision-making for government agencies.</p>
+      <p>Implemented robust security measures to safeguard sensitive information, adhering to stringent government data protection standards.</p>
+     
+      <h3>Emergency Notification System</h3>
+      <p>Spearheaded the design and implementation of a Cloud-based Emergency Notification System tailored for government agencies.</p>
+      <p>Integrated SMS alerts, email notifications, and geolocation services for targeted emergency communication, improving response times.</p>
+      <p>Developed a resilient and fault-tolerant architecture to guarantee system availability during critical situations.</p>
+     
+      <h3>Compliance Monitoring Tool</h3>
+      <p>Engineered a cutting-edge Compliance Monitoring Tool using GovCloud services to track and enforce adherence to government regulations and policies.</p>
+      <p>Implemented automated compliance checks, reducing manual efforts and enhancing accuracy in policy adherence assessments.</p>
+      <p>Conducted regular audits and assessments, contributing to the continuous improvement of the organization's compliance posture.</p>
+     
+    </section>
+
+    <section>
+      <h2><u>IV. Certification</u></h2>
+      <p>AWS Certified Solutions Architect, 2023</p>
+      <p>AWS Certified Cloud Practitioner, 2023</p>
+      <p>CloudUp For Her AWS Program</p>
+    </section>
+
+    <section>
+      <h2><u>V. Experience</u></h2>
+      <h3>PROJECT ENGINEER</h3>
+      <p>ARCHER WESTERN CONSTRUCTION</p>
+      <p>Start Date: May 2022</p>
+      <p>End Date: Current</p>
+      <p>Designed a company-wide excel application to manage changes to scope, cost and documentation.
+        This application was applied to monitor a successful $80M commercial development resulting in equipment, labor and subcontractor cost reducing by 20% below estimated margins. </p>
+        <p>Collaborated with legal in the drafting and reviewing subcontractor bonds contracts to ensure that they captured the important points of the subcontractor bond.</p>
+        <p>Implemented risk management and risk assessment to manage, prioritize and reduce risk for the organization</p>
+
+        </p>
+    </section>
+
+    <section>
+      <h3>GRC ANALYST</h3>
+      <p>SIMPLYCYBER.IO</p>
+      <p>Start Date: JANUARY 2020</p>
+      <p>End Date: May 2022</p>
+      <p>Prepared, executed, and audited a subset of NIST SP 800-53 controls, ensuring compliance with cybersecurity standards.
+        <p>Designed and implemented information security policies to establish authorized access management and authenticator management for both internal and third-party personnel.</p>
+        <P> Studied and performed different forms of social engineering to learn mitigation techniques</P>
+        </p>
+    </section>
+
+  </main>
+
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+        color: #495057;
+      }
+  
+      main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+      }
+  
+      h2 {
+        color: #ffd700;
+      }
+  
+      .bar-graph {
+        margin-top: 20px;
+      }
+  
+      .bar {
+        height: 30px;
+        background-color: #d2b48c;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        position: relative;
+      }
+  
+      .bar span {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #ffd700;
+        font-weight: bold;
+      }
+    </style>
+    <title>Skill Proficiency</title>
+  </head>
+  
+  <body>
+  
+    <main>
+      <h2><u>VI. Skill Proficiency</u></h2>
+  
+      <div class="bar-graph">
+        <div class="bar" style="width: 90%;">
+          <span>Project Management</span>
+        </div>
+  
+        <div class="bar" style="width: 80%;">
+          <span>Cloud Architecture</span>
+        </div>
+
+        <div class="bar" style="width: 80%;">
+          <span>Cloud Infrastructure</span>
+        </div>
+
+        <div class="bar" style="width: 80%;">
+          <span>Disaster Recovery Planning</span>
+        </div>
+
+        <div class="bar" style="width: 70%;">
+          <span>Firewall Configuration</span>
+        </div>
+
+        <div class="bar" style="width: 50%;">
+          <span>Docker and Kubernetes</span>
+        </div>
+
+        <div class="bar" style="width: 90%;">
+          <span>Cloud Computing Services</span>
+        </div>
+
+        <div class="bar" style="width: 60%;">
+          <span> OSI & TCP/IP Model</span>
+        </div>
+
+        <div class="bar" style="width: 80%;">
+          <span> NIST SP 800-53</span>
+        </div>
+
+        <div class="bar" style="width: 60%;">
+          <span>SQL, Redis</span>
+        </div>
+
+        <div class="bar" style="width: 80%;">
+          <span>Networking</span>
+        </div>
+
+        <div class="bar" style="width: 90%;">
+          <span>Report Writing</span>
+        </div>
+
+        <div class="bar" style="width: 80%;">
+          <span>Multi-Factor authentication (Okta, OAuth/SAML)</span>
+        </div>
+
+        <div class="bar" style="width: 80%;">
+          <span>Queue and Notification Management</span>
+        </div>
+
+        <div class="bar" style="width: 80%;">
+          <span>Encryption Management</span>
+        </div>
+
+        <div class="bar" style="width: 70%;">
+          <span>GRC (Governance, Risk, and Compliance)</span>
+        </div>
+  
+        <div class="bar" style="width: 70%;">
+          <span>Security</span>
+        </div>
+      </div>
+    </main>
+  
+  </body>
+  
+  </html>
+  
+
+
+  <footer>
+    <p>&copy; 2023 Brittany Washington. All rights reserved.</p>
+  </footer>
+
+  <div class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</div>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+
+</body>
+
+</html>
+
+
+

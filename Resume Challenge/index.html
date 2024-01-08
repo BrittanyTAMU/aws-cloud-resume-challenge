@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> My First Website</title>
+        <body>
+            <h1>This is an h1 heading</h1>
+            <!--h2 is smaller font than h1 and h3 is smaller than h2 and so on and so on-->
+            <h2>This is an h2 heading</h2>
+            <h3>This is an h3 heading</h3>
+            <h4>This is an h4 heading</h4>
+            <h5>This is an h5 heading</h5>
+#save with ctrl + S
+            <p>
+                some text goes here. and paragraphs are seperated with a line break
+            </p>
+            <p>some more text goes here. and paragraphs are seperated with a line break</p>
+#if you do need a break type <br> its a self closing tab
+<hr> will add an hortizontal line across your page- itll look good for a titl
+if you want to have your paragraph in a line format use 
+<pre>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, veniam ea. Esse sapiente illo alias dolore modi odio cum blanditiis excepturi quas labore, 
+    facere cupiditate vel vitae optio ullam atque?
+</pre>    
+<!--THIS IS A COMMENT FORMAT-->
+</body>
+    </head>
+</html> 
+<!--to ceate a hyper link use the function :<a> "A" means anchor and an href attibute: its a hypertext reference. paste the url in the "google.com"
+    if you write _blank in the reference hyperlink section, it will open new tab or go back to google-->
+<a href="https://google.com"
+target="_blank"
+title="goes to google">
+<!--this tiltle will be the title you get when you hoover aroud the hypertext-->
+    click me now 
+</a>
+
+<br>
+<!--we can also create a hyperlink going to our lyrics html-->
+<a href="LYRICS.HTML"> 
+    song lyrics
+</a>
+<br>
+<!--create a link to email someone-->
+<a href="mailto:test@fake.com">
+    email me
+</a>
+
+<!--!-add images to a webpage using html first save the image to the folder->
+<!-alt will allow ppl who are visually imaparied to read aloud what the image is-->
+<!--you can adjust the height of the image-->
+
+<h2>this is a cute woman</h2>
+<h3> engineer</h3>
+<img src="images/professional headshot.jpg"
+height "1000" width="full screen"
+alt="this is a picture of my graduation">
+<!--turn the image into a hyperlink-->
+<a href="images/professional headshot.jpg"></a>
+<!--you can also add gif to the pg. first save the gif to the folder-->
+<img src="images/giphy.gif"
+height="200"
+alt="aquaman smiling with heart hands">
+<br>
+
+
+<!--to add audio to your website download mp3 files to the flder go to youtube audio libary. 
+            then must add controls to the opening audio tag.
+            you can type auto play to autoplay the song, but at least mute it bc its annoying. 
+            you can also loop it so it never ends. 
+            in case you web browser doesnt support a certain audo type, add fallbacks (backup of the save file). 
+            make the file type wav and specify the type -->
+            <body>
+                <p>Gully Dreams</p>
+                <audio controls autoplay muted loop>
+                    <source src="Music/Gully Dreams - Hanu Dixit.mp3" type="audio/mpeg">
+                    <source src="Music/Gully Dreams - Hanu Dixit.wav" type="audio/wav">
+                </audio>
+                <p>Lawrence</p>
+                <audio controls>
+                    <source src="Music/Lawrence - TrackTribe.mp3">
+                </audio>
+                <p>the Urban Groove</p>
+                <audio controls>
+                    <source src="Music/The Urban Groove - Hanu Dixit.mp3">
+                </audio>
+                <br>
+            <body>
+                 <!--how to include a video in your web page using HTML download a mp4, .webm or .ogg to your flder
+                add a url to the video
+            if you want the link to open in a new tab, set the target to blank-->
+                <a target="_blank" href="https://www.google.com/">
+                 <video width="500px" controls autoplay loop muted>
+                    <source src="video/IMG_0509.MP4" type="video/mp4">
+                 </video>
+                </a>
+            </body>
+           
+           
+

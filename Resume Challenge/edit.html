@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    :root {
+      --primary-bg-light: #f8f9fa;
+      --primary-bg-dark: #001f3f; /* Dark blue */
+      --text-color-light: #495057;
+      --text-color-dark: #e5e5e5;
+      --accent-color: #d2b48c; /* Tan color */
+      --yellow-color: #ffd700; /* Yellow color */
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--primary-bg-light);
+      color: var(--text-color-light);
+      transition: background-color 0.5s, color 0.5s;
+      position: relative; /* Set body position to relative */
+    }
+
+    .dark-mode body {
+      background-color: var(--primary-bg-dark);
+      color: var(--text-color-dark);
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 0;
+      background-color: var(--accent-color);
+      color: var(--primary-bg-light);
+      position: relative; /* Set header position to relative */
+    }
+
+    h1, h2, h3 {
+      color: var(--yellow-color); /* Set text color to yellow */
+      z-index: 1; /* Set z-index to make sure text is in front */
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      margin-top: 20px;
+      background-color: var(--primary-bg-light);
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.5s;
+    }
+
+    .dark-mode main {
+      background-color: var(--primary-bg-dark);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--accent-color);
+      color: var(--primary-bg-light);
+      border-radius: 0 0 8px 8px;
+      margin-top: 20px;
+    }
+
+    .dark-mode footer {
+      background-color: var(--primary-bg-dark);
+    }
+
+    .dark-mode-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 30px; /* Adjust the font size as needed */
+      cursor: pointer;
+      color: var(--accent-color);
+      z-index: 2; /* Set z-index to be in front of the text */
+    }
+
+    .dark-mode .dark-mode-toggle {
+      color: var(--primary-bg-light);
+    }
+
+    .wave-animation {
+      position: absolute; /* Set position to absolute */
+      top: 0; /* Adjust the top position as needed */
+      left: 0; /* Set left to 0 */
+      width: 100%; /* Make the image span the entire width */
+      text-align: left; /* Align the image to the left */
+      z-index: 0; /* Set z-index to be behind the text */
+    }
+
+    .wave-animation img {
+      width: 230px; /* Adjust the width as needed */
+    }
+  </style>
+  <title>Cloud Resume</title>
+</head>
+
+<body>
+
+  <header>
+    <h1>Hi! My name is Brittany Washington, MSc, </h1> <!-- Added this line -->
+    <h2>Cloud Engineer</h2> <!-- Added this line -->
+    <!-- Move the .wave-animation inside header -->
+    <div class="wave-animation">
+      <img src="images/bg.png" alt="Animated Wave">
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Contact Information</h2>
+      <p><i class="fas fa-envelope"></i> Email: bgw26@tamu.edu | bgw26@rutgers.edu</p>
+      <p><i class="fas fa-phone"></i> Phone: 862.900.9557</p>
+      <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/bgw2023" target="_blank">LinkedIn</a></p>
+      <p>REFERENCES ARE AVAILABLE UPON REQUEST</p>
+    </section>
+
+    <!-- Rest of your content -->
+
+  </main>
+
+  <!-- Rest of your HTML -->
+
+  <footer>
+    <p>&copy; 2023 Brittany Washington. All rights reserved.</p>
+  </footer>
+
+  <div class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</div>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Your existing styles go here */
+
+        .survey-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .survey-question {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .survey-options button {
+            font-size: 16px;
+            margin: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+    <title>Your Website</title>
+</head>
+
+<body>
+
+  <!-- Your existing HTML content goes here -->
+
+  <!-- Survey Section -->
+  <div class="survey-container">
+    <h3 class="survey-question">Based on the resume, how much do you think I should negotiate for my salary?</h3>
+    <div class="survey-options">
+      <button onclick="submitSurvey(50000)">50,000</button>
+      <button onclick="submitSurvey(75000)">75,000</button>
+      <button onclick="submitSurvey(100000)">100,000</button>
+      <button onclick="submitSurvey(125000)">125,000</button>
+    </div>
+  </div>
+
+  <!-- Survey JavaScript -->
+  <script>
+    function submitSurvey(salary) {
+      alert('Thank you for your response! Your suggested salary: $' + salary);
+      // You can also send this data to your server for further analysis
+    }
+  </script>
+
+  <!-- Your existing JavaScript code goes here -->
+
+</body>
+
+</html>
+
