@@ -1,17 +1,21 @@
-name: My Workflow
+name : Upload website to S3
 
 on:
   push:
     branches:
-      - main
+    - main
 
 jobs:
-  build:
+
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      - name: Run a simple command
-        run: echo "Hello, Actions!"
+    - uses: actions/checkout@master
+    - uses: jakejarvis/s3-sync-action@master
+    with:
+      args: --acl public-read --follow-symlinks --delete
+    env:
+      AWS_S3_BUCKET: ${{ secret.AWS_S3_BUCKET }}
+      AWS_ACCESS_KEY_ID: ${{ secret.AWS_ACCESS_KEY_ID }}
+      AWS_REGION: 'us-east-1'
+      SOURCE_DIR: 'Resume Challenge'
