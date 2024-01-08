@@ -18,4 +18,4 @@ jobs:
       AWS_S3_BUCKET: ${{ secret.AWS_S3_BUCKET }}
       AWS_ACCESS_KEY_ID: ${{ secret.AWS_ACCESS_KEY_ID }}
       AWS_REGION: 'us-east-1'
-      SOURCE_DIR: 'website'
+      SOURCE_DIR: 'Resume Challenge2'
